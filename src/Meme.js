@@ -5,7 +5,7 @@ export default function Meme() {
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
-        randomImage: "https://meme-meow.netlify.app/img/cat-after-surgery.jpg/img/cat-after-surgery.jpg" 
+        randomImage: "https://meme-meow.netlify.app/img/cat-after-surgery.jpg" 
     })
     
     /**
