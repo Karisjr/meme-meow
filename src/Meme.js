@@ -5,7 +5,7 @@ export default function Meme() {
     const [meme, setMeme] = React.useState({
         topText: "",
         bottomText: "",
-        randomImage: "http://localhost:8000/img/cat-after-surgery.jpg" 
+        randomImage: "https://meme-meow.netlify.app/img/cat-after-surgery.jpg/img/cat-after-surgery.jpg" 
     })
     
     /**
@@ -20,8 +20,7 @@ export default function Meme() {
     
     React.useEffect(() => {
         async function getMemes() {
-            // const res = await fetch("https://api.imgflip.com/get_memes")
-            const res = await fetch("http://127.0.0.1:8000/api/cat")
+            const res = await fetch("https://meme-meow.netlify.app/.netlify/functions/meow")
             const data = await res.json()
             console.log("server respo", data)
             setAllMemes(data.data.memes)
